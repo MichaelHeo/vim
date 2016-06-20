@@ -1,7 +1,6 @@
 # My VIM Source File
--------------------------------
 
-Follow the following steps
+Follow those steps...
 -------------------------------
 
 1. You gotta download Vundle (Plugin manager)
@@ -9,4 +8,8 @@ Follow the following steps
 
   So simple.
 
-2. Have Fun!
+2. Open vim and then :PluginInstall
+  
+  Will install all plugins setted on .vimrc
+
+3. Have Fun!
