@@ -27,6 +27,21 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " FLATCOLOR Install
 Plugin 'maxst/flatcolor'
 
+" VIM-JAVASCRIPT Install
+Plugin 'pangloss/vim-javascript'
+
+" CTRLP Install
+Plugin 'ctrlpvim/ctrlp.vim'
+
+" JSON Install
+Plugin 'elzr/vim-json'
+
+" AUTO PAIRS Install
+Plugin 'jiangmiao/auto-pairs'
+
+" VIM-MOUSECLICK Install
+Plugin 'albertz/vim-mouseclick'
+
 " EMMET Install
 Plugin 'mattn/emmet-vim'
 
@@ -75,9 +90,8 @@ filetype plugin indent on
 
 set nu
 
-colorscheme gruvbox
+colorscheme zenburn
 set background=dark    " Setting dark mode
-let g:gruvbox_contrast_dark="hard"
 set t_Co=256
 
 set cursorline
@@ -85,9 +99,10 @@ set cursorcolumn
 
 set autoindent
 set cindent
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set expandtab
-set shiftwidth=6
-set softtabstop=6
 
 set pastetoggle=<F2>
 
@@ -106,14 +121,23 @@ let g:syntastic_check_on_wq = 0
 " ########## airline config ##########
 set laststatus=2
 let g:airline_powerline_fonts = 1
+let g:airline_section_b = '%{strftime("%c")}'
+let g:airline_section_y = 'BN: %{bufnr("%")}'
 let g:airline_theme='bubblegum'
 
 " ########## indent guide config ##########
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
-set ts=2 sw=2 et
+let g:indent_guides_start_level = 4
+let g:indent_guides_guide_size = 4
+set ts=4 sw=4 et
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
 " ########## gitgutter config ##########
 let g:gitgutter_sign_column_always = 1
+
+" ########## vim-javascript config ##########
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_ngdoc = 1
+let g:javascript_plugin_flow = 1
+set conceallevel=1
+
